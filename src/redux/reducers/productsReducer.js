@@ -1,4 +1,5 @@
 import { ActionTypes } from "../constants/action-types";
+
 const intialState = {
   products: [],
 };
@@ -19,6 +20,7 @@ export const selectedProductsReducer = (state = {}, { type, payload }) => {
       return { ...state, ...payload };
     case ActionTypes.REMOVE_SELECTED_PRODUCT:
       return {};
+      
     default:
       return state;
   }
